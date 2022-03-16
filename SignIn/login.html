@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>루나 로그인</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/lgjs.js"></script>
+    <script src="https://kit.fontawesome.com/8d7b4dec9d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main-container">
+        
+        <div class="main-wrap">
+            
+            <header>
+                <div class="sel-lang-wrap">
+                    <select class="lang-select">
+                        <option>한국어</option>
+                        <option>English</option>
+                    </select>
+                </div>
+                <div class="logo-wrap">
+                    <img src="image/logo1.png" alt="">
+                </div>
+            </header>
+        <form method="post" name="join" id="join">
+            <section class="login-input-section-wrap">
+                
+                <div class="login-input-wrap">
+                    
+                    <input placeholder="아이디" type="text" id="id" class="int check" maxlength="20"></input>
+                </div>
+                <h5 class="list"><span id="idError"></span></h5>
+                <div class="login-input-wrap password-wrap">
+                    
+                    <input placeholder="비밀번호" type="password"  id="pw" class="int check" maxlength="20"></input>
+                </div>
+                <h5 class="list"><span id="pwError"></span></h5>
+                <div class="btn_area">
+                    <input type="submit" value="로그인" id="btnJoin" class="btn_type btn_primary"onclick="login()">
+                </div>
+                <div class="login-stay-sign-in">
+                    <i class="far fa-check-circle"></i>
+                    <span>로그인 상태 유지</span>
+                </div>
+            </section>
+        </form>    
+            <section class="Easy-sign-in-wrap">
+                <h2>간편 로그인</h2>
+                <ul class="sign-button-list">
+                    <li>
+                        <button><i class="fas fa-qrcode"></i>
+                            <span>QR코드</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button><i class="fab fa-facebook-square"></i>
+                            <span>페이스북</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button><i class="fab fa-instagram-square"></i>
+                            <span>인스타그램</span>
+                        </button>
+                    </li>
+                </ul>
+                <p class="forget-msg">아이디 비밀번호를 잊어버리셨나요? | 회원가입</p>
+            </section>
+            <footer>
+                <div class="copyright-wrap">
+                    <span> <img src="image/logo1.png"> Copyright ⓒ LUNA Corp. All Rights Reserved.
+                    </span>
+                </div>
+            </footer>
+       
+        </div>
+    </div>
+    <script>
+        function login(){
+         const id = document.querySelector("#id");
+         const pw = document.querySelector("#pw");
+         if(id.value=='' || pw.value==''){
+          alert('아이디를 입력해 주세요'); 
+         }
+         if(id.value=='muticampus' && pw.value=='1234'){
+          alert('로그인이 되었습니다.');
+         }
+        }
+        function create_member(){
+         location.href="create_member.html"
+        }
+       </script>
+</body>
+
+
+</html>
